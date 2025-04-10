@@ -22,11 +22,11 @@ export const News = async () => {
 
   return (
     <section
-      className='container mt-20'
-      id='news'
+      className='container mt-14 md:mt-20'
+      id='media'
     >
-      <h2 className='border-b pb-5 text-3xl leading-none font-semibold tracking-tight transition-colors'>
-        News
+      <h2 className='border-b pb-5 text-2xl leading-none font-semibold tracking-tight transition-colors md:text-3xl'>
+        Media
       </h2>
 
       <div className='mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>

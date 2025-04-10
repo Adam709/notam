@@ -65,19 +65,19 @@ export function AirTable({
 
   return (
     <section
-      className='container mt-10'
-      id='table'
+      className='container mt-14 md:mt-20'
+      id='tracker'
     >
-      <div className='flex items-center justify-between gap-5 pb-5'>
-        <h1 className='text-3xl leading-none font-semibold tracking-tight transition-colors'>
-          Table{' '}
+      <div className='flex gap-5 pb-5 max-md:flex-col md:items-center md:justify-between'>
+        <h1 className='text-2xl leading-none font-semibold tracking-tight transition-colors md:text-3xl'>
+          NOTAM Tracker <br className='md:hidden' />
           <span className='text-muted-foreground text-base'>
             (total: {totalCount} / on current page:{' '}
             {table.getFilteredRowModel().rows.length})
           </span>
         </h1>
         <SearchBar
-          className='w-100'
+          className='md:w-100'
           search={search}
           setSearch={setSearch}
         />

@@ -3,6 +3,7 @@ import { airColumns } from './components/air-table/airt-columns'
 import { airPortColumns } from './components/airport-table/airport-columns'
 import { AirPortTable } from './components/airport-table/airport-table'
 import { GoogleForm } from './components/google-form/google-form'
+import { Hero } from './components/hero'
 import { News } from './components/news/news'
 import { AirInfo, AirportInfo } from '@/types/table'
 import { getSheetData } from '@/utils/google/sheet'
@@ -53,6 +54,7 @@ const HomePage = async (props: HomePageProps) => {
 
   return (
     <>
+      <Hero />
       <AirTable
         totalPages={totalPages}
         totalCount={data.total}

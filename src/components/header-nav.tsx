@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 
 const navItems = [
-  { href: '/#table', label: 'Table' },
-  { href: '/#form', label: 'Form' },
-  { href: '/#news', label: 'News' }
+  { href: '/#tracker', label: 'Tracker' },
+  { href: '/#reports', label: 'Reports' },
+  { href: '/#media', label: 'Media' }
 ]
 
 export const HeaderNav = () => {
