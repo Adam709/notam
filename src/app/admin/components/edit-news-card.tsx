@@ -107,7 +107,7 @@ export const EditNewsCard = ({
       queryClient.invalidateQueries({ queryKey: ['news'] })
       toast.success('News item updated successfully!')
       setOpen(false)
-      setNewsItem(null)
+      setNewsItem?.(null)
     },
     onError: (error: any) => {
       toast.error(error.message ? error.message : 'Something went wrong, try again')
