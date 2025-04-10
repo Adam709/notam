@@ -75,12 +75,14 @@ interface EditNewsCardProps {
   open?: boolean
   setOpen?: (open: boolean) => void
   hideButton?: boolean
+  setNewsItem?: (newsItem: SupabaseNews | null) => void
 }
 
 export const EditNewsCard = ({
   newsItem,
   open: externalOpen,
   setOpen: externalSetOpen,
+  setNewsItem,
   hideButton = false
 }: EditNewsCardProps) => {
   const [internalOpen, setInternalOpen] = useState(false)
@@ -105,6 +107,7 @@ export const EditNewsCard = ({
       queryClient.invalidateQueries({ queryKey: ['news'] })
       toast.success('News item updated successfully!')
       setOpen(false)
+      setNewsItem(null)
     },
     onError: (error: any) => {
       toast.error(error.message ? error.message : 'Something went wrong, try again')

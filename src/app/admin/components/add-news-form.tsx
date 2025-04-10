@@ -167,6 +167,7 @@ export const AddNewsForm = () => {
       </Form>
       {newsItem && (
         <EditNewsCard
+          setNewsItem={setNewsItem}
           newsItem={newsItem}
           open={open}
           setOpen={setOpen}
