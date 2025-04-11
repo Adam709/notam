@@ -65,7 +65,7 @@ export function AirTable({
 
   return (
     <section
-      className='container mt-14 md:mt-20'
+      className='container mt-14 max-w-400 md:mt-20'
       id='tracker'
     >
       <div className='flex gap-5 pb-5 max-md:flex-col md:items-center md:justify-between'>

@@ -42,8 +42,10 @@ export const getSheetData = async (offset = 0, limit = 100) => {
     const allRows = countRes.data.values || []
     const realRowCount = allRows.length - 1 // minus header row
 
-    const startRow = offset + 2
-    const endRow = startRow + limit - 1
+    // Calculate row positions from the bottom instead of the top
+    const endRow = realRowCount + 1 - offset // +1 because we're starting after the header
+    const startRow = Math.max(2, endRow - limit + 1) // Ensure we don't go before the header (row 1)
+
     const range = `${SHEET_NAME}!A${startRow}:Z${endRow}`
 
     const valuesRes = await sheets.spreadsheets.values.get({
@@ -53,8 +55,11 @@ export const getSheetData = async (offset = 0, limit = 100) => {
 
     const values = valuesRes.data.values || []
 
+    // Further reverse the array to ensure newest rows come first
+    const reversedValues = [...values].reverse()
+
     return {
-      data: values.map(normalizeRow),
+      data: reversedValues.map(normalizeRow),
       total: realRowCount
     }
   } catch (error) {
@@ -65,4 +70,3 @@ export const getSheetData = async (offset = 0, limit = 100) => {
     }
   }
 }
-
