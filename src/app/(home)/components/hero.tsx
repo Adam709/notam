@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <section className='container mt-10'>
       <h1 className='text-center text-2xl font-bold md:text-[32px]'>
-        Welcome to NavCanadaWatch.ca!
+        Welcome to NavCanadaWatch.ca
       </h1>
       <p className='mt-2 text-center text-sm font-bold'>
         This is not a NavCanada website.
