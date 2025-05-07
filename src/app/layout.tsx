@@ -22,6 +22,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <Header />
         <main className='pb-20'>
           <TanstackQueryProvider>{children}</TanstackQueryProvider>
+          <meta name="google-site-verification" content="5VY9hWRwoGpSLOX0zphzWqx8d4267wpqZT0Nw4I3YmI" />
         </main>
       </body>
     </html>
