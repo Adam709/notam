@@ -22,7 +22,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <Header />
         <main className='pb-20'>
           <TanstackQueryProvider>{children}</TanstackQueryProvider>
-  
         </main>
       </body>
     </html>
