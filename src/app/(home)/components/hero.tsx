@@ -23,7 +23,7 @@ export const Hero = () => {
             NavCanada is not serving Canadian aviation up to the expected standard.
             Constant excuses about staffing have persisted for years—spanning
             decades—and the situation continues to worsen with whatever is the latest
-            excuse of the day (e.g., baby boomers, COVID, Trump, etc.).
+            excuse of the day (e.g., baby boomers, COVID, etc.).
           </p>
         </div>
         <div className='flex flex-col gap-2'>
