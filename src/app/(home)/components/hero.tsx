@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 export const Hero = () => {
   return (
-   <meta name="google-site-verification" content="5VY9hWRwoGpSLOX0zphzWqx8d4267wpqZT0Nw4I3YmI" />
     <section className='container mt-10'>
       <h1 className='text-center text-2xl font-bold md:text-[32px]'>
         Welcome to NavCanadaWatch.ca
