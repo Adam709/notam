@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 import { PropsWithChildren } from 'react'
 
 import './globals.css'
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang='en'>
+      <Head>
+        <meta
+          name='google-site-verification'
+          content='5VY9hWRwoGpSLOX0zphzWqx8d4267wpqZT0Nw4I3YmI'
+        />
+      </Head>
       <body className='antialiased'>
         <Header />
         <main className='pb-20'>
